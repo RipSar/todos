@@ -24,7 +24,6 @@ const AllItems = ({
     return (
         <ul className='all_todos'>
             {todos
-                // .filter(item => filter === null || item.isCompleted === filter)
                 .map(item => (
                     <ItemElement
                         key={item.id}
