@@ -1,0 +1,46 @@
+.todo-footer {
+  background: white;
+  display: flex;
+  padding: 0.8em;
+  justify-content: space-between;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px,
+                rgb(246, 246, 246) 0px 8px 0px -3px,
+              rgba(0, 0, 0, 0.2) 0px 9px 1px -3px,
+                rgb(246, 246, 246) 0px 16px 0px -6px,
+              rgba(0, 0, 0, 0.2) 0px 17px 2px -6px;
+
+  span {
+    color: rgb(119, 119, 119);
+
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    justify-self: center;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 3px;
+    min-width: min-content;
+    color: rgb(119, 119, 119);
+    margin-right: 2%;
+
+    &:hover {
+      border: 1px solid #f7eaea;
+    }
+    &:last-child {
+      margin: unset;
+    }
+  }
+  .active_filter {
+    border: 1px solid #efd5d5;
+  }
+  .action.hidden {
+    opacity: 0;
+  }
+}

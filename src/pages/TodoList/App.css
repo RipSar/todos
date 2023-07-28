@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.todo-part {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+.App h1 {
+  margin: 0 auto;
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+  color: #ead7d7;
+}

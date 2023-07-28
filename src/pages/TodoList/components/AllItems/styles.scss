@@ -1,0 +1,80 @@
+.all_todos {
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  padding: unset;
+  margin: unset;
+  background-color: white;
+
+  ::marker {
+    content: none;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ededed;
+
+    .taskArea{
+      margin-left: 10%;
+      outline: none;
+      width: 90%;
+      font-size: 24px;
+      padding: 10px 10px;
+      border: 1px solid #999;
+      box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .label-for-todo-list{
+      width: 10%;
+      background: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E") no-repeat center;
+      cursor: pointer;
+    }
+
+    .input-for-todo-list {
+      width: 10%;
+      display: none;
+
+      &:checked ~ p {
+        transition: 0.2s;
+        text-decoration: line-through;
+        color: #d9d9d9;
+      }
+
+      &:checked ~ .label-for-todo-list {
+        transition: 0.2s;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E");
+      }
+    }
+
+    p {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 0.5em;
+      width: 80%;
+      font-size: 24px;
+      word-wrap: break-word;
+    }
+
+    .deleteTaskButton {
+      width: 10%;
+      background: none;
+      max-height: 40px;
+      align-self: center;
+      border: none;
+      font-size: 30px;
+      color: #cc9a9a;
+      opacity: 0;
+
+      &:hover {
+        color: #af5b5e;
+      }
+    }
+  }
+
+  :hover {
+    .deleteTaskButton {
+      opacity: 1;
+    }
+  }
+}
